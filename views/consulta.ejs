@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultados da Consulta</title>
+</head>
+<body>
+  <h1>Resultados da Consulta</h1>
+  
+  <% if (UsuarioProcurado.length > 0) { %>
+    <ul>
+      <% UsuarioProcurado.forEach((usuario) => { %>
+        <li><%= usuario.nome %> - <%= usuario.email %></li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>Nenhum resultado encontrado.</p>
+  <% } %>
+</body>
+</html>
